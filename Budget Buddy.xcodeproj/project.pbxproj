@@ -37,8 +37,8 @@
 		0C3C5F33190F3BBE00B1E243 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F32190F3BBE00B1E243 /* Security.framework */; };
 		0C3C5F35190F3BC500B1E243 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */; };
 		0C3C5F37190F3BCA00B1E243 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */; };
-		0C3C5F39190F3BEF00B1E243 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F38190F3BEF00B1E243 /* Parse.framework */; };
 		0C3C5F3C190F3C5B00B1E243 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F3B190F3C5B00B1E243 /* DetailViewController.m */; };
+		0C3C5F3E190F42E500B1E243 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F3D190F42E500B1E243 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,9 +88,9 @@
 		0C3C5F32190F3BBE00B1E243 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		0C3C5F38190F3BEF00B1E243 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0C3C5F3A190F3C5B00B1E243 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		0C3C5F3B190F3C5B00B1E243 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0C3C5F3D190F42E500B1E243 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 				0C3C5F31190F3BB900B1E243 /* MobileCoreServices.framework in Frameworks */,
 				0C3C5F2F190F3BB300B1E243 /* AudioToolbox.framework in Frameworks */,
 				0C3C5F2D190F3BAC00B1E243 /* CoreLocation.framework in Frameworks */,
-				0C3C5F39190F3BEF00B1E243 /* Parse.framework in Frameworks */,
+				0C3C5F3E190F42E500B1E243 /* Parse.framework in Frameworks */,
 				0C3C5F2B190F3BA600B1E243 /* libz.dylib in Frameworks */,
 				0C3C5F29190F3BA100B1E243 /* QuartzCore.framework in Frameworks */,
 				0C3C5F27190F3B9A00B1E243 /* StoreKit.framework in Frameworks */,
@@ -156,7 +156,6 @@
 		0C3C5ED8190E88BD00B1E243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0C3C5F38190F3BEF00B1E243 /* Parse.framework */,
 				0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */,
 				0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */,
 				0C3C5F32190F3BBE00B1E243 /* Security.framework */,
@@ -263,6 +262,7 @@
 		0C3C5F16190F39F800B1E243 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				0C3C5F3D190F42E500B1E243 /* Parse.framework */,
 				0C3C5F17190F39F800B1E243 /* README.md */,
 			);
 			path = "Third Party";
@@ -502,6 +502,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Third",
+					Party,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Budget Buddy/Budget Buddy-Prefix.pch";
@@ -519,6 +521,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Third",
+					Party,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Budget Buddy/Budget Buddy-Prefix.pch";
