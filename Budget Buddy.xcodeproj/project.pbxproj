@@ -12,13 +12,20 @@
 		0C3C5EDE190E88BD00B1E243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5EDD190E88BD00B1E243 /* UIKit.framework */; };
 		0C3C5EE4190E88BD00B1E243 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5EE2190E88BD00B1E243 /* InfoPlist.strings */; };
 		0C3C5EE6190E88BD00B1E243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5EE5190E88BD00B1E243 /* main.m */; };
-		0C3C5EEA190E88BD00B1E243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5EE9190E88BD00B1E243 /* AppDelegate.m */; };
 		0C3C5EEC190E88BD00B1E243 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5EEB190E88BD00B1E243 /* Images.xcassets */; };
 		0C3C5EF3190E88BD00B1E243 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5EF2190E88BD00B1E243 /* XCTest.framework */; };
 		0C3C5EF4190E88BD00B1E243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5ED9190E88BD00B1E243 /* Foundation.framework */; };
 		0C3C5EF5190E88BD00B1E243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5EDD190E88BD00B1E243 /* UIKit.framework */; };
 		0C3C5EFD190E88BD00B1E243 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5EFB190E88BD00B1E243 /* InfoPlist.strings */; };
 		0C3C5EFF190E88BD00B1E243 /* Budget_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5EFE190E88BD00B1E243 /* Budget_BuddyTests.m */; };
+		0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F0A190F39B100B1E243 /* AppDelegate.m */; };
+		0C3C5F0D190F39B100B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F0B190F39B100B1E243 /* README.md */; };
+		0C3C5F1A190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F0F190F39F800B1E243 /* README.md */; };
+		0C3C5F1B190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F11190F39F800B1E243 /* README.md */; };
+		0C3C5F1C190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F13190F39F800B1E243 /* README.md */; };
+		0C3C5F1D190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F15190F39F800B1E243 /* README.md */; };
+		0C3C5F1E190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F17190F39F800B1E243 /* README.md */; };
+		0C3C5F1F190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F19190F39F800B1E243 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +47,21 @@
 		0C3C5EE3190E88BD00B1E243 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C3C5EE5190E88BD00B1E243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C3C5EE7190E88BD00B1E243 /* Budget Buddy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Budget Buddy-Prefix.pch"; sourceTree = "<group>"; };
-		0C3C5EE8190E88BD00B1E243 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		0C3C5EE9190E88BD00B1E243 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0C3C5EEB190E88BD00B1E243 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0C3C5EF1190E88BD00B1E243 /* Budget BuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Budget BuddyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3C5EF2190E88BD00B1E243 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0C3C5EFA190E88BD00B1E243 /* Budget BuddyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Budget BuddyTests-Info.plist"; sourceTree = "<group>"; };
 		0C3C5EFC190E88BD00B1E243 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0C3C5EFE190E88BD00B1E243 /* Budget_BuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Budget_BuddyTests.m; sourceTree = "<group>"; };
+		0C3C5F09190F39B100B1E243 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0C3C5F0A190F39B100B1E243 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0C3C5F0B190F39B100B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C3C5F0F190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C3C5F11190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C3C5F13190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C3C5F15190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C3C5F17190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C3C5F19190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,13 @@
 		0C3C5ECD190E88BD00B1E243 = {
 			isa = PBXGroup;
 			children = (
+				0C3C5F08190F39B100B1E243 /* Classes */,
+				0C3C5F10190F39F800B1E243 /* Models */,
+				0C3C5F18190F39F800B1E243 /* Views */,
+				0C3C5F14190F39F800B1E243 /* Resources */,
+				0C3C5F0E190F39F800B1E243 /* Images */,
+				0C3C5F12190F39F800B1E243 /* Preload */,
+				0C3C5F16190F39F800B1E243 /* Third Party */,
 				0C3C5EDF190E88BD00B1E243 /* Budget Buddy */,
 				0C3C5EF8190E88BD00B1E243 /* Budget BuddyTests */,
 				0C3C5ED8190E88BD00B1E243 /* Frameworks */,
@@ -107,8 +128,6 @@
 		0C3C5EDF190E88BD00B1E243 /* Budget Buddy */ = {
 			isa = PBXGroup;
 			children = (
-				0C3C5EE8190E88BD00B1E243 /* AppDelegate.h */,
-				0C3C5EE9190E88BD00B1E243 /* AppDelegate.m */,
 				0C3C5EEB190E88BD00B1E243 /* Images.xcassets */,
 				0C3C5EE0190E88BD00B1E243 /* Supporting Files */,
 			);
@@ -142,6 +161,64 @@
 				0C3C5EFB190E88BD00B1E243 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0C3C5F08190F39B100B1E243 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0C3C5F09190F39B100B1E243 /* AppDelegate.h */,
+				0C3C5F0A190F39B100B1E243 /* AppDelegate.m */,
+				0C3C5F0B190F39B100B1E243 /* README.md */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0C3C5F0E190F39F800B1E243 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0C3C5F0F190F39F800B1E243 /* README.md */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0C3C5F10190F39F800B1E243 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C3C5F11190F39F800B1E243 /* README.md */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0C3C5F12190F39F800B1E243 /* Preload */ = {
+			isa = PBXGroup;
+			children = (
+				0C3C5F13190F39F800B1E243 /* README.md */,
+			);
+			path = Preload;
+			sourceTree = "<group>";
+		};
+		0C3C5F14190F39F800B1E243 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0C3C5F15190F39F800B1E243 /* README.md */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0C3C5F16190F39F800B1E243 /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				0C3C5F17190F39F800B1E243 /* README.md */,
+			);
+			path = "Third Party";
+			sourceTree = "<group>";
+		};
+		0C3C5F18190F39F800B1E243 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C3C5F19190F39F800B1E243 /* README.md */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +296,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3C5F1C190F39F800B1E243 /* README.md in Resources */,
+				0C3C5F0D190F39B100B1E243 /* README.md in Resources */,
 				0C3C5EE4190E88BD00B1E243 /* InfoPlist.strings in Resources */,
+				0C3C5F1D190F39F800B1E243 /* README.md in Resources */,
+				0C3C5F1B190F39F800B1E243 /* README.md in Resources */,
+				0C3C5F1A190F39F800B1E243 /* README.md in Resources */,
+				0C3C5F1F190F39F800B1E243 /* README.md in Resources */,
+				0C3C5F1E190F39F800B1E243 /* README.md in Resources */,
 				0C3C5EEC190E88BD00B1E243 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3C5EEA190E88BD00B1E243 /* AppDelegate.m in Sources */,
+				0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */,
 				0C3C5EE6190E88BD00B1E243 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
