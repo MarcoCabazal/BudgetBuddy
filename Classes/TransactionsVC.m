@@ -7,7 +7,6 @@
     //
 
 #import "TransactionsVC.h"
-
 #import "NewTransactionsVC.h"
 
 @interface TransactionsVC () {
@@ -26,22 +25,18 @@
 
     [super viewDidLoad];
 
-    [self setTitle:@"Accounts Overview"];
-	UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
-    [self setTabBarItem:item];
+    [self setTitle:self.accountObject[@"accountDescription"]];
 
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    [self.navigationItem.backBarButtonItem setTitle:@"Accounts"];
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(displayNewVC)];
     self.navigationItem.rightBarButtonItem = addButton;
-
 
     PFUser *currentUser = [PFUser currentUser];
 
 	if (! currentUser) {
 
 
-            // present login form
     } else {
 
         NSLog (@"currentUser: %@", currentUser.username);
