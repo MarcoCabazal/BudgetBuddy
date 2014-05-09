@@ -29,9 +29,10 @@
 
     [super viewDidAppear:YES];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [self.accountDescription becomeFirstResponder];
 }
 
-- (void) viewDidDisappear:(BOOL)animated {
+- (void)viewDidDisappear:(BOOL)animated {
 
     [super viewDidDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
@@ -87,7 +88,6 @@
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
 
-    NSLog (@"tag: %d / %@", textField.tag, textField.text);
     [textField resignFirstResponder];
     return YES;
 }
