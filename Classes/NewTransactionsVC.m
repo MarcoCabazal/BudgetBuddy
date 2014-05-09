@@ -14,40 +14,76 @@
 
 @implementation NewTransactionsVC
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+            // Custom initialization
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
 
     [super viewDidLoad];
 
     [self setTitle:@"New Transaction"];
 
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(createTransaction)];
-    self.navigationItem.rightBarButtonItem = doneButton;
-
-
 	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissThisVC)];
     [self.navigationItem setLeftBarButtonItem:cancelButton];
 
-    UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
-    [container setBackgroundColor:[UIColor blueColor]];
+    [self.transactionDescription becomeFirstResponder];
 
     [self.navigationItem setTitle:@"New Transaction"];
-
-    [self.view addSubview:container];
 }
 
-- (void)createTransaction {
+- (void)viewDidAppear:(BOOL)animated {
 
-    PFUser *currentUser = [PFUser currentUser];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+}
 
-    if (currentUser) {
+#pragma mark TextField Notification
 
-        PFObject *transaction = [PFObject objectWithClassName:@"TransactionObject"];
-        transaction[@"transactionDesc"] = @"PLDT Bills";
-        transaction[@"owner"] = currentUser;
-        [transaction saveEventually];
+-(void) keyboardDidShow:(NSNotification*) notification {
+
+}
+
+#pragma mark - TextField Delegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+
+    if (textField == self.transactionDescription) {
+
+        [self.transactionAmount becomeFirstResponder];
+
+    } else if (textField == self.transactionAmount) {
+
+        if ([self.transactionDescription.text length] > 0 && [self.transactionAmount.text length] > 0) {
+
+            [textField resignFirstResponder];
+
+            [self.view endEditing:YES];
+
+            [self.createTransactionButton setEnabled:YES];
+
+        } else {
+
+            [self.transactionDescription becomeFirstResponder];
+
+        }
     }
 
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
+    
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)dismissThisVC {
