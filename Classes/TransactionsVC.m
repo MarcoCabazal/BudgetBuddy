@@ -36,11 +36,21 @@
 
 	if (! currentUser) {
 
+        NSLog (@"currentUser not found.");
+            // TODO: present login form
 
     } else {
 
-        NSLog (@"currentUser: %@", currentUser.username);
+        PFQuery *query = [PFQuery queryWithClassName:@"Transaction"];
+        query.cachePolicy = kPFCachePolicyNetworkElseCache;
+        [query whereKey:@"owner" equalTo:currentUser];
+        [query whereKey:@"account" equalTo:self.accountObject];
 
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+
+            _objects = [objects mutableCopy];
+            [self.tableView reloadData];
+        }];
     }
 }
 
@@ -103,10 +113,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    }
+
+    PFObject *object = _objects[indexPath.row];
+
+    cell.textLabel.text = object[@"transactionDescription"];
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
 }
 
