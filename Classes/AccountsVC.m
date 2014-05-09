@@ -8,6 +8,7 @@
 
 #import "AccountsVC.h"
 #import "NewAccountsVC.h"
+#import "TransactionsVC.h"
 
 @interface AccountsVC () {
     NSMutableArray *_objects;
@@ -154,6 +155,16 @@
     cell.textLabel.text = object[@"accountDescription"];
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    PFObject *accountObject = _objects[indexPath.row];
+
+	TransactionsVC *transactionsVC = [[TransactionsVC alloc] init];
+    [transactionsVC setAccountObject:accountObject];
+
+    [self.navigationController pushViewController:transactionsVC animated:YES];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
