@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C25EFA01914B3CF0012A80D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F3D190F42E500B1E243 /* Parse.framework */; };
+		0C25EFE719172AF50012A80D /* NewAccountsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFE619172AF50012A80D /* NewAccountsVC.m */; };
+		0C25EFE919172B480012A80D /* NewAccountsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFE819172B480012A80D /* NewAccountsVC.xib */; };
+		0C25EFEB19172B5A0012A80D /* NewTransactionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */; };
+		0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFF2191879BE0012A80D /* TransactionsVC.m */; };
 		0C3C5EDA190E88BD00B1E243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5ED9190E88BD00B1E243 /* Foundation.framework */; };
 		0C3C5EDC190E88BD00B1E243 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5EDB190E88BD00B1E243 /* CoreGraphics.framework */; };
 		0C3C5EDE190E88BD00B1E243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5EDD190E88BD00B1E243 /* UIKit.framework */; };
@@ -19,14 +24,7 @@
 		0C3C5EFD190E88BD00B1E243 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5EFB190E88BD00B1E243 /* InfoPlist.strings */; };
 		0C3C5EFF190E88BD00B1E243 /* Budget_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5EFE190E88BD00B1E243 /* Budget_BuddyTests.m */; };
 		0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F0A190F39B100B1E243 /* AppDelegate.m */; };
-		0C3C5F0D190F39B100B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F0B190F39B100B1E243 /* README.md */; };
-		0C3C5F1A190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F0F190F39F800B1E243 /* README.md */; };
-		0C3C5F1B190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F11190F39F800B1E243 /* README.md */; };
-		0C3C5F1C190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F13190F39F800B1E243 /* README.md */; };
-		0C3C5F1D190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F15190F39F800B1E243 /* README.md */; };
-		0C3C5F1E190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F17190F39F800B1E243 /* README.md */; };
-		0C3C5F1F190F39F800B1E243 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3C5F19190F39F800B1E243 /* README.md */; };
-		0C3C5F22190F3B3500B1E243 /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F21190F3B3500B1E243 /* MainVC.m */; };
+		0C3C5F22190F3B3500B1E243 /* AccountsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F21190F3B3500B1E243 /* AccountsVC.m */; };
 		0C3C5F25190F3B5500B1E243 /* NewTransactionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F24190F3B5500B1E243 /* NewTransactionsVC.m */; };
 		0C3C5F27190F3B9A00B1E243 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F26190F3B9A00B1E243 /* StoreKit.framework */; };
 		0C3C5F29190F3BA100B1E243 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F28190F3BA100B1E243 /* QuartzCore.framework */; };
@@ -37,8 +35,6 @@
 		0C3C5F33190F3BBE00B1E243 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F32190F3BBE00B1E243 /* Security.framework */; };
 		0C3C5F35190F3BC500B1E243 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */; };
 		0C3C5F37190F3BCA00B1E243 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */; };
-		0C3C5F3C190F3C5B00B1E243 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F3B190F3C5B00B1E243 /* DetailViewController.m */; };
-		0C3C5F3E190F42E500B1E243 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F3D190F42E500B1E243 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C25EFE519172AF50012A80D /* NewAccountsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAccountsVC.h; sourceTree = "<group>"; };
+		0C25EFE619172AF50012A80D /* NewAccountsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAccountsVC.m; sourceTree = "<group>"; };
+		0C25EFE819172B480012A80D /* NewAccountsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewAccountsVC.xib; sourceTree = "<group>"; };
+		0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTransactionsVC.xib; sourceTree = "<group>"; };
+		0C25EFF1191879BE0012A80D /* TransactionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsVC.h; sourceTree = "<group>"; };
+		0C25EFF2191879BE0012A80D /* TransactionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsVC.m; sourceTree = "<group>"; };
+		0C25EFF7191BCA0B0012A80D /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		0C3C5ED6190E88BD00B1E243 /* Budget Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3C5ED9190E88BD00B1E243 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C3C5EDB190E88BD00B1E243 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,8 +78,8 @@
 		0C3C5F15190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		0C3C5F17190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		0C3C5F19190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		0C3C5F20190F3B3500B1E243 /* MainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
-		0C3C5F21190F3B3500B1E243 /* MainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		0C3C5F20190F3B3500B1E243 /* AccountsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsVC.h; sourceTree = "<group>"; };
+		0C3C5F21190F3B3500B1E243 /* AccountsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsVC.m; sourceTree = "<group>"; };
 		0C3C5F23190F3B5500B1E243 /* NewTransactionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTransactionsVC.h; sourceTree = "<group>"; };
 		0C3C5F24190F3B5500B1E243 /* NewTransactionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTransactionsVC.m; sourceTree = "<group>"; };
 		0C3C5F26190F3B9A00B1E243 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -88,8 +91,6 @@
 		0C3C5F32190F3BBE00B1E243 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		0C3C5F3A190F3C5B00B1E243 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		0C3C5F3B190F3C5B00B1E243 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		0C3C5F3D190F42E500B1E243 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,8 +105,8 @@
 				0C3C5F31190F3BB900B1E243 /* MobileCoreServices.framework in Frameworks */,
 				0C3C5F2F190F3BB300B1E243 /* AudioToolbox.framework in Frameworks */,
 				0C3C5F2D190F3BAC00B1E243 /* CoreLocation.framework in Frameworks */,
-				0C3C5F3E190F42E500B1E243 /* Parse.framework in Frameworks */,
 				0C3C5F2B190F3BA600B1E243 /* libz.dylib in Frameworks */,
+				0C25EFA01914B3CF0012A80D /* Parse.framework in Frameworks */,
 				0C3C5F29190F3BA100B1E243 /* QuartzCore.framework in Frameworks */,
 				0C3C5F27190F3B9A00B1E243 /* StoreKit.framework in Frameworks */,
 				0C3C5EDC190E88BD00B1E243 /* CoreGraphics.framework in Frameworks */,
@@ -216,12 +217,15 @@
 			children = (
 				0C3C5F09190F39B100B1E243 /* AppDelegate.h */,
 				0C3C5F0A190F39B100B1E243 /* AppDelegate.m */,
-				0C3C5F20190F3B3500B1E243 /* MainVC.h */,
-				0C3C5F21190F3B3500B1E243 /* MainVC.m */,
-				0C3C5F3A190F3C5B00B1E243 /* DetailViewController.h */,
-				0C3C5F3B190F3C5B00B1E243 /* DetailViewController.m */,
+				0C3C5F20190F3B3500B1E243 /* AccountsVC.h */,
+				0C3C5F21190F3B3500B1E243 /* AccountsVC.m */,
+				0C25EFE519172AF50012A80D /* NewAccountsVC.h */,
+				0C25EFE619172AF50012A80D /* NewAccountsVC.m */,
+				0C25EFF1191879BE0012A80D /* TransactionsVC.h */,
+				0C25EFF2191879BE0012A80D /* TransactionsVC.m */,
 				0C3C5F23190F3B5500B1E243 /* NewTransactionsVC.h */,
 				0C3C5F24190F3B5500B1E243 /* NewTransactionsVC.m */,
+				0C25EFF7191BCA0B0012A80D /* Config.h */,
 				0C3C5F0B190F39B100B1E243 /* README.md */,
 			);
 			path = Classes;
@@ -271,6 +275,8 @@
 		0C3C5F18190F39F800B1E243 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C25EFE819172B480012A80D /* NewAccountsVC.xib */,
+				0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */,
 				0C3C5F19190F39F800B1E243 /* README.md */,
 			);
 			path = Views;
@@ -351,14 +357,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3C5F1C190F39F800B1E243 /* README.md in Resources */,
-				0C3C5F0D190F39B100B1E243 /* README.md in Resources */,
 				0C3C5EE4190E88BD00B1E243 /* InfoPlist.strings in Resources */,
-				0C3C5F1D190F39F800B1E243 /* README.md in Resources */,
-				0C3C5F1B190F39F800B1E243 /* README.md in Resources */,
-				0C3C5F1A190F39F800B1E243 /* README.md in Resources */,
-				0C3C5F1F190F39F800B1E243 /* README.md in Resources */,
-				0C3C5F1E190F39F800B1E243 /* README.md in Resources */,
+				0C25EFE919172B480012A80D /* NewAccountsVC.xib in Resources */,
+				0C25EFEB19172B5A0012A80D /* NewTransactionsVC.xib in Resources */,
 				0C3C5EEC190E88BD00B1E243 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,10 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3C5F3C190F3C5B00B1E243 /* DetailViewController.m in Sources */,
-				0C3C5F22190F3B3500B1E243 /* MainVC.m in Sources */,
+				0C3C5F22190F3B3500B1E243 /* AccountsVC.m in Sources */,
+				0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */,
 				0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */,
 				0C3C5F25190F3B5500B1E243 /* NewTransactionsVC.m in Sources */,
+				0C25EFE719172AF50012A80D /* NewAccountsVC.m in Sources */,
 				0C3C5EE6190E88BD00B1E243 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,8 +504,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Third",
-					Party,
+					"\"$(PROJECT_DIR)/Third Party\"/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Budget Buddy/Budget Buddy-Prefix.pch";
@@ -521,8 +522,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Third",
-					Party,
+					"\"$(PROJECT_DIR)/Third Party\"/**",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Budget Buddy/Budget Buddy-Prefix.pch";
@@ -591,6 +591,7 @@
 				0C3C5F04190E88BD00B1E243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C3C5F05190E88BD00B1E243 /* Build configuration list for PBXNativeTarget "Budget BuddyTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +600,7 @@
 				0C3C5F07190E88BD00B1E243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
