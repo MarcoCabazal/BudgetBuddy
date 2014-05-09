@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewTransactionsVC : UIViewController
+@protocol TransactionsDelegate <NSObject>
+
+@required
+- (void) saveNewTransaction:(NSString*)transactionDescription transactionAmount:(NSNumber*)transactionAmount;
+
+@end
+
+@interface NewTransactionsVC : UIViewController <UITextFieldDelegate>
+@property (strong, nonatomic) IBOutlet UITextField *transactionDescription;
+@property (strong, nonatomic) IBOutlet UITextField *transactionAmount;
+@property (strong, nonatomic) IBOutlet UIButton *createTransactionButton;
+@property (nonatomic, assign) id <TransactionsDelegate> delegate;
+
+-(IBAction)createTransaction;
 
 @end

@@ -77,6 +77,13 @@
         }
     }
 
+    return YES;
+}
+
+- (IBAction)createTransaction {
+
+    [self.delegate saveNewTransaction:self.transactionDescription.text transactionAmount:[NSNumber numberWithDouble:[self.transactionAmount.text doubleValue]]];
+
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
