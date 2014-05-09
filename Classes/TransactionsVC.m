@@ -56,47 +56,27 @@
 
 - (void)displayNewVC {
 
-    NewTransactionsVC *newVC = [[NewTransactionsVC alloc] init];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newVC];
+    NewTransactionsVC *newTransactionVC = [[NewTransactionsVC alloc] init];
+    [newTransactionVC setDelegate:self];
 
-    [self.navigationController presentViewController:navVC animated:YES completion:nil];
+    [self.navigationController presentViewController:newTransactionVC animated:YES completion:nil];
 }
 
-- (void)signup {
+- (void)saveNewTransaction:(NSString *)transactionDescription transactionAmount:(NSNumber *)transactionAmount {
 
-    PFUser *user = [PFUser user];
-    user.username = @"marku";
-    user.password = @"h3ll0";
-    user.email = @"marco.cabazal@gmail.com";
+    PFUser *currentUser = [PFUser currentUser];
 
+    if (currentUser) {
 
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (!error) {
+        PFObject *transactionObject = [PFObject objectWithClassName:@"Transaction"];
+        transactionObject[@"transactionDescription"] = transactionDescription;
+        transactionObject[@"transactionAmount"] = transactionAmount;
+        transactionObject[@"account"] = self.accountObject;
+        transactionObject[@"owner"] = currentUser;
 
-        } else {
-            NSString *errorString = [error userInfo][@"error"];
-
-            NSLog (@"Singup Error: %@", errorString);
-
-        }
-    }];
-}
-
-- (void)login {
-
-    [PFUser logInWithUsernameInBackground:@"marku" password:@"h3ll0"
-                                    block:^(PFUser *user, NSError *error) {
-                                        if (user) {
-
-                                            NSLog (@"login success.");
-
-                                        } else {
-
-                                            NSString *errorString = [error userInfo][@"error"];
-
-                                            NSLog (@"Login Error: %@", errorString);
-                                        }
-                                    }];
+        [_objects addObject:transactionObject];
+        [transactionObject saveEventually];
+    }
 }
 
 #pragma mark - Table View
