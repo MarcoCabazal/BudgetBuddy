@@ -47,7 +47,7 @@
     } else {
 
         PFQuery *query = [PFQuery queryWithClassName:@"Account"];
-        query.cachePolicy = kPFCachePolicyNetworkElseCache;
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
         [query whereKey:@"owner" equalTo:currentUser];
 
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {

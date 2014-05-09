@@ -42,7 +42,7 @@
     } else {
 
         PFQuery *query = [PFQuery queryWithClassName:@"Transaction"];
-        query.cachePolicy = kPFCachePolicyNetworkElseCache;
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
         [query whereKey:@"owner" equalTo:currentUser];
         [query whereKey:@"account" equalTo:self.accountObject];
 
