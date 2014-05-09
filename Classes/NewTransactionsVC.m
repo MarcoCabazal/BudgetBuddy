@@ -18,24 +18,44 @@
 
     [super viewDidLoad];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(displayNewVC)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    [self setTitle:@"New Transaction"];
 
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(createTransaction)];
+    self.navigationItem.rightBarButtonItem = doneButton;
+
+
+	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissThisVC)];
+    [self.navigationItem setLeftBarButtonItem:cancelButton];
 
     UIView *container = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
     [container setBackgroundColor:[UIColor blueColor]];
 
-    [self.navigationItem setTitle:@"TZ Buddy"];
+    [self.navigationItem setTitle:@"New Transaction"];
 
     [self.view addSubview:container];
 }
 
-- (void)displayNewVC {
+- (void)createTransaction {
+
+    PFUser *currentUser = [PFUser currentUser];
+
+    if (currentUser) {
+
+        PFObject *transaction = [PFObject objectWithClassName:@"TransactionObject"];
+        transaction[@"transactionDesc"] = @"PLDT Bills";
+        transaction[@"owner"] = currentUser;
+        [transaction saveEventually];
+    }
 
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-   	
 }
 
+- (void)dismissThisVC {
+
+//    [self createTransaction];
+
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)didReceiveMemoryWarning {
 
