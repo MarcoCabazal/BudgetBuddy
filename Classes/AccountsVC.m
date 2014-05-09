@@ -153,7 +153,7 @@
     PFObject *object = _objects[indexPath.row];
 
     cell.textLabel.text = object[@"accountDescription"];
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 

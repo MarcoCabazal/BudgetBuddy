@@ -98,13 +98,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     }
 
     PFObject *object = _objects[indexPath.row];
 
     cell.textLabel.text = object[@"transactionDescription"];
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", object[@"transactionAmount"]];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
 
