@@ -7,6 +7,7 @@
 //
 
 #import "NewAccountsVC.h"
+#import "AccountTypesVC.h"
 
 @interface NewAccountsVC () {
 
@@ -60,36 +61,40 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 
-    if (textField == self.accountDescription) {
-
-        [self.accountType becomeFirstResponder];
-
-    } else if (textField == self.accountType) {
-
-        if ([self.accountDescription.text length] > 0 && [self.accountType.text length] > 0) {
-
-            [textField resignFirstResponder];
-
-            [self.view endEditing:YES];
-
-            [self.delegate saveNewAccount:self.accountDescription.text accountType:self.accountType.text];
-
-            [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
-
-        } else {
-
-            [self.accountDescription becomeFirstResponder];
-
-        }
-    }
-
     return YES;
+}
+
+- (IBAction)createAccount {
+
+    [self.view endEditing:YES];
+
+    [self.delegate saveNewAccount:self.accountDescription.text accountType:self.accountTypeButton.titleLabel.text];
+
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
 
     [textField resignFirstResponder];
     return YES;
+}
+
+- (IBAction)showAccountTypes {
+
+    AccountTypesVC *accountTypesVC = [[AccountTypesVC alloc] init];
+    [accountTypesVC setDelegate:self];
+    if (! [self.accountTypeButton.titleLabel.text isEqualToString:@"Account Type"]) {
+
+        [accountTypesVC setSelectedAccountType:self.accountTypeButton.titleLabel.text];
+    }
+
+    [self.navigationController pushViewController:accountTypesVC animated:YES];
+}
+
+
+- (void)updateAccountTypeWith:(NSString *)accountType {
+
+    [self.accountTypeButton setTitle:accountType forState:UIControlStateNormal];
 }
 
 

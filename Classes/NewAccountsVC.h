@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AccountTypesVC.h"
 
 @protocol AccountsDelegate <NSObject>
 
@@ -15,10 +16,12 @@
 
 @end
 
-@interface NewAccountsVC : UIViewController <UITextFieldDelegate>
+@interface NewAccountsVC : UIViewController <UITextFieldDelegate, AccountTypesDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *accountDescription;
 @property (strong, nonatomic) IBOutlet UITextField *accountType;
+@property (strong, nonatomic) IBOutlet UIButton *accountTypeButton;
+@property (strong, nonatomic) IBOutlet UIButton *createAccountButton;
 @property (nonatomic, assign) id <AccountsDelegate> delegate;
 @end
 
