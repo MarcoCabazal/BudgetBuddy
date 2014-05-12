@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol AccountTypesDelegate <NSObject>
+
+@required
+- (void) updateAccountTypeWith:(NSString*)accountType;
+
+@end
+
 @interface AccountTypesVC : UITableViewController
+@property (strong, nonatomic) NSString *selectedAccountType;
+@property (nonatomic, assign) id <AccountTypesDelegate> delegate;
 
 @end

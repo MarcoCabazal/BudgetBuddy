@@ -12,6 +12,7 @@
 		0C25EFE919172B480012A80D /* NewAccountsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFE819172B480012A80D /* NewAccountsVC.xib */; };
 		0C25EFEB19172B5A0012A80D /* NewTransactionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */; };
 		0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFF2191879BE0012A80D /* TransactionsVC.m */; };
+		0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFF9191FEAF20012A80D /* AccountTypesVC.m */; };
 		0C3C5EDA190E88BD00B1E243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5ED9190E88BD00B1E243 /* Foundation.framework */; };
 		0C3C5EDC190E88BD00B1E243 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5EDB190E88BD00B1E243 /* CoreGraphics.framework */; };
 		0C3C5EDE190E88BD00B1E243 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5EDD190E88BD00B1E243 /* UIKit.framework */; };
@@ -55,6 +56,8 @@
 		0C25EFF1191879BE0012A80D /* TransactionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsVC.h; sourceTree = "<group>"; };
 		0C25EFF2191879BE0012A80D /* TransactionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsVC.m; sourceTree = "<group>"; };
 		0C25EFF7191BCA0B0012A80D /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		0C25EFF8191FEAF20012A80D /* AccountTypesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTypesVC.h; sourceTree = "<group>"; };
+		0C25EFF9191FEAF20012A80D /* AccountTypesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTypesVC.m; sourceTree = "<group>"; };
 		0C3C5ED6190E88BD00B1E243 /* Budget Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budget Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3C5ED9190E88BD00B1E243 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0C3C5EDB190E88BD00B1E243 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -221,6 +224,8 @@
 				0C3C5F21190F3B3500B1E243 /* AccountsVC.m */,
 				0C25EFE519172AF50012A80D /* NewAccountsVC.h */,
 				0C25EFE619172AF50012A80D /* NewAccountsVC.m */,
+				0C25EFF8191FEAF20012A80D /* AccountTypesVC.h */,
+				0C25EFF9191FEAF20012A80D /* AccountTypesVC.m */,
 				0C25EFF1191879BE0012A80D /* TransactionsVC.h */,
 				0C25EFF2191879BE0012A80D /* TransactionsVC.m */,
 				0C3C5F23190F3B5500B1E243 /* NewTransactionsVC.h */,
@@ -381,6 +386,7 @@
 			files = (
 				0C3C5F22190F3B3500B1E243 /* AccountsVC.m in Sources */,
 				0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */,
+				0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */,
 				0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */,
 				0C3C5F25190F3B5500B1E243 /* NewTransactionsVC.m in Sources */,
 				0C25EFE719172AF50012A80D /* NewAccountsVC.m in Sources */,
