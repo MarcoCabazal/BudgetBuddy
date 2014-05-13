@@ -7,7 +7,7 @@
 //
 
 #import "AccountsVC.h"
-#import "NewAccountsVC.h"
+#import "AccountVC.h"
 #import "TransactionsVC.h"
 
 @interface AccountsVC () {
@@ -81,7 +81,7 @@
 
 - (void)displayNewAccountsVC {
 
-    NewAccountsVC *newVC = [[NewAccountsVC alloc] init];
+    AccountVC *newVC = [[AccountVC alloc] init];
     [newVC setDelegate:self];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newVC];
 

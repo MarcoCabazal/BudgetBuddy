@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewAccountsVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccountVC">
             <connections>
                 <outlet property="accountDescription" destination="LjJ-fH-dK5" id="txA-7x-gsi"/>
                 <outlet property="accountTypeButton" destination="2MP-UR-eCg" id="ZU3-TQ-PsR"/>

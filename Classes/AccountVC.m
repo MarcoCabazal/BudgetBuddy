@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 The Chill Mill. All rights reserved.
 //
 
-#import "NewAccountsVC.h"
+#import "AccountVC.h"
 #import "AccountTypesVC.h"
 
-@interface NewAccountsVC () {
+@interface AccountVC () {
 
 }
 
 @end
 
-@implementation NewAccountsVC
+@implementation AccountVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     

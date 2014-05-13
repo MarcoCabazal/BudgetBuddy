@@ -16,7 +16,7 @@
 
 @end
 
-@interface NewAccountsVC : UIViewController <UITextFieldDelegate, AccountTypesDelegate>
+@interface AccountVC : UIViewController <UITextFieldDelegate, AccountTypesDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *accountDescription;
 @property (strong, nonatomic) IBOutlet UITextField *accountType;

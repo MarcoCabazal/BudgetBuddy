@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C25EFA01914B3CF0012A80D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F3D190F42E500B1E243 /* Parse.framework */; };
-		0C25EFE719172AF50012A80D /* NewAccountsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFE619172AF50012A80D /* NewAccountsVC.m */; };
-		0C25EFE919172B480012A80D /* NewAccountsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFE819172B480012A80D /* NewAccountsVC.xib */; };
+		0C25EFE719172AF50012A80D /* AccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFE619172AF50012A80D /* AccountVC.m */; };
+		0C25EFE919172B480012A80D /* AccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFE819172B480012A80D /* AccountVC.xib */; };
 		0C25EFEB19172B5A0012A80D /* NewTransactionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */; };
 		0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFF2191879BE0012A80D /* TransactionsVC.m */; };
 		0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFF9191FEAF20012A80D /* AccountTypesVC.m */; };
@@ -49,9 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C25EFE519172AF50012A80D /* NewAccountsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAccountsVC.h; sourceTree = "<group>"; };
-		0C25EFE619172AF50012A80D /* NewAccountsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAccountsVC.m; sourceTree = "<group>"; };
-		0C25EFE819172B480012A80D /* NewAccountsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewAccountsVC.xib; sourceTree = "<group>"; };
+		0C25EFE519172AF50012A80D /* AccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountVC.h; sourceTree = "<group>"; };
+		0C25EFE619172AF50012A80D /* AccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountVC.m; sourceTree = "<group>"; };
+		0C25EFE819172B480012A80D /* AccountVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountVC.xib; sourceTree = "<group>"; };
 		0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTransactionsVC.xib; sourceTree = "<group>"; };
 		0C25EFF1191879BE0012A80D /* TransactionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsVC.h; sourceTree = "<group>"; };
 		0C25EFF2191879BE0012A80D /* TransactionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsVC.m; sourceTree = "<group>"; };
@@ -222,8 +222,8 @@
 				0C3C5F0A190F39B100B1E243 /* AppDelegate.m */,
 				0C3C5F20190F3B3500B1E243 /* AccountsVC.h */,
 				0C3C5F21190F3B3500B1E243 /* AccountsVC.m */,
-				0C25EFE519172AF50012A80D /* NewAccountsVC.h */,
-				0C25EFE619172AF50012A80D /* NewAccountsVC.m */,
+				0C25EFE519172AF50012A80D /* AccountVC.h */,
+				0C25EFE619172AF50012A80D /* AccountVC.m */,
 				0C25EFF8191FEAF20012A80D /* AccountTypesVC.h */,
 				0C25EFF9191FEAF20012A80D /* AccountTypesVC.m */,
 				0C25EFF1191879BE0012A80D /* TransactionsVC.h */,
@@ -280,7 +280,7 @@
 		0C3C5F18190F39F800B1E243 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C25EFE819172B480012A80D /* NewAccountsVC.xib */,
+				0C25EFE819172B480012A80D /* AccountVC.xib */,
 				0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */,
 				0C3C5F19190F39F800B1E243 /* README.md */,
 			);
@@ -363,7 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3C5EE4190E88BD00B1E243 /* InfoPlist.strings in Resources */,
-				0C25EFE919172B480012A80D /* NewAccountsVC.xib in Resources */,
+				0C25EFE919172B480012A80D /* AccountVC.xib in Resources */,
 				0C25EFEB19172B5A0012A80D /* NewTransactionsVC.xib in Resources */,
 				0C3C5EEC190E88BD00B1E243 /* Images.xcassets in Resources */,
 			);
@@ -389,7 +389,7 @@
 				0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */,
 				0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */,
 				0C3C5F25190F3B5500B1E243 /* NewTransactionsVC.m in Sources */,
-				0C25EFE719172AF50012A80D /* NewAccountsVC.m in Sources */,
+				0C25EFE719172AF50012A80D /* AccountVC.m in Sources */,
 				0C3C5EE6190E88BD00B1E243 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

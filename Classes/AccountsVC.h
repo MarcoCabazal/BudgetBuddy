@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NewAccountsVC.h"
+#import "AccountVC.h"
 
 @interface AccountsVC : UITableViewController <AccountsDelegate>
 
