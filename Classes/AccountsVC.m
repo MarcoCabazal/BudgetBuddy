@@ -176,7 +176,12 @@
 
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 
+        PFObject *accountObject = _objects[indexPath.row];
+        [accountObject deleteEventually];
+        
         [_objects removeObjectAtIndex:indexPath.row];
+
+
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
