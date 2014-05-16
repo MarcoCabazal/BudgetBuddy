@@ -91,16 +91,14 @@
     [self.navigationController pushViewController:accountTypesVC animated:YES];
 }
 
-
 - (void)updateAccountTypeWith:(NSString *)accountType {
 
     [self.accountTypeButton setTitle:accountType forState:UIControlStateNormal];
 }
 
-
 - (void)dismissThisVC {
 
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

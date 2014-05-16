@@ -54,12 +54,17 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+
+    [self.tableView reloadData];
+}
+
 - (void)displayNewVC {
 
     NewTransactionsVC *newTransactionVC = [[NewTransactionsVC alloc] init];
     [newTransactionVC setDelegate:self];
 
-    [self.navigationController presentViewController:newTransactionVC animated:YES completion:nil];
+    [self.navigationController pushViewController:newTransactionVC animated:YES];
 }
 
 - (void)saveNewTransaction:(NSString *)transactionDescription transactionAmount:(NSNumber *)transactionAmount {

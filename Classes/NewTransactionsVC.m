@@ -84,7 +84,7 @@
 
     [self.delegate saveNewTransaction:self.transactionDescription.text transactionAmount:[NSNumber numberWithDouble:[self.transactionAmount.text doubleValue]]];
 
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
@@ -97,7 +97,7 @@
 
 //    [self createTransaction];
 
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

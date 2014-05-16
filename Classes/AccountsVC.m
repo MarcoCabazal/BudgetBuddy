@@ -85,7 +85,7 @@
     [newVC setDelegate:self];
     UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newVC];
 
-    [self.navigationController presentViewController:navVC animated:YES completion:nil];
+    [self.navigationController pushViewController:accountVC animated:YES];
 }
 
 - (void)signup {
