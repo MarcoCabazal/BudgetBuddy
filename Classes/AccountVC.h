@@ -11,9 +11,9 @@
 
 @protocol AccountDelegate <NSObject>
 
-@required
+@optional
 - (void) saveNewAccount:(NSString*)accountDescription accountType:(NSString*)accountType;
-
+- (void) updateAccount:(PFObject*)accountObject withDescription:(NSString*)accountDescription andAccountType:(NSString*)accountType;
 @end
 
 @interface AccountVC : UIViewController <UITextFieldDelegate, AccountTypesDelegate>
