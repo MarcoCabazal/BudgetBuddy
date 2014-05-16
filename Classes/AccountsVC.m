@@ -79,11 +79,38 @@
     }
 }
 
+- (void) updateAccount:(PFObject *)accountObject withDescription:(NSString *)accountDescription andAccountType:(NSString *)accountType {
+
+    PFUser *currentUser = [PFUser currentUser];
+
+    if (currentUser) {
+
+		if (accountDescription)
+            accountObject[@"accountDescription"] = accountDescription;
+
+        if (accountType)
+            accountObject[@"accountType"] = accountType;
+
+        int i;
+
+        for (i = 0; i < [_objects count]; i++) {
+
+            PFObject *object = [_objects objectAtIndex:i];
+
+			if ([object.objectId isEqualToString:accountObject.objectId]) {
+
+				[_objects replaceObjectAtIndex:i withObject:accountObject];
+            }
+        }
+
+        [accountObject saveEventually];
+    }
+}
+
 - (void)displayNewAccountsVC {
 
-    AccountVC *newVC = [[AccountVC alloc] init];
-    [newVC setDelegate:self];
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:newVC];
+    AccountVC *accountVC = [[AccountVC alloc] init];
+    [accountVC setDelegate:self];
 
     [self.navigationController pushViewController:accountVC animated:YES];
 }
@@ -153,8 +180,19 @@
     PFObject *object = _objects[indexPath.row];
 
     cell.textLabel.text = object[@"accountDescription"];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+
+    PFObject *object = _objects[indexPath.row];
+
+    AccountVC *accountVC = [[AccountVC alloc] init];
+    [accountVC setDelegate:self];
+    [accountVC setAccountObject:object];
+
+    [self.navigationController pushViewController:accountVC animated:YES];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

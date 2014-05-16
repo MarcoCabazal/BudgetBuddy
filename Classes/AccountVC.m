@@ -45,6 +45,12 @@
 
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissThisVC)];
     [self.navigationItem setLeftBarButtonItem:cancelButton];
+
+    if (self.accountObject) {
+
+        [self.accountDescription setText:self.accountObject[@"accountDescription"]];
+        [self.accountTypeButton setTitle:self.accountObject[@"accountType"] forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark TextField Notification
@@ -68,9 +74,16 @@
 
     [self.view endEditing:YES];
 
-    [self.delegate saveNewAccount:self.accountDescription.text accountType:self.accountTypeButton.titleLabel.text];
+    if (self.accountObject) {
 
-    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+        [self.delegate updateAccount:self.accountObject withDescription:self.accountDescription.text andAccountType:self.accountTypeButton.titleLabel.text];
+
+    } else {
+
+        [self.delegate saveNewAccount:self.accountDescription.text accountType:self.accountTypeButton.titleLabel.text];
+    }
+
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)textFieldShouldEndEditing:(UITextField *)textField {
