@@ -15,7 +15,7 @@
 
 @end
 
-@interface NewTransactionsVC : UIViewController <UITextFieldDelegate>
+@interface TransactionVC : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *transactionDescription;
 @property (strong, nonatomic) IBOutlet UITextField *transactionAmount;
 @property (strong, nonatomic) IBOutlet UIButton *createTransactionButton;

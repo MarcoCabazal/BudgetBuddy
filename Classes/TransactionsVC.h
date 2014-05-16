@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NewTransactionsVC.h"
+#import "TransactionVC.h"
 
 @interface TransactionsVC : UITableViewController <TransactionsDelegate>
 @property (strong, nonatomic) PFObject *accountObject;

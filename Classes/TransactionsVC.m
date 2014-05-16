@@ -7,7 +7,7 @@
     //
 
 #import "TransactionsVC.h"
-#import "NewTransactionsVC.h"
+#import "TransactionVC.h"
 
 @interface TransactionsVC () {
     NSMutableArray *_objects;
@@ -61,7 +61,7 @@
 
 - (void)displayNewVC {
 
-    NewTransactionsVC *newTransactionVC = [[NewTransactionsVC alloc] init];
+    TransactionVC *newTransactionVC = [[TransactionVC alloc] init];
     [newTransactionVC setDelegate:self];
 
     [self.navigationController pushViewController:newTransactionVC animated:YES];

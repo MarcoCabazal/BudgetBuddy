@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 The Chill Mill. All rights reserved.
 //
 
-#import "NewTransactionsVC.h"
+#import "TransactionVC.h"
 
-@interface NewTransactionsVC ()
+@interface TransactionVC ()
 
 @end
 
-@implementation NewTransactionsVC
+@implementation TransactionVC
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
 

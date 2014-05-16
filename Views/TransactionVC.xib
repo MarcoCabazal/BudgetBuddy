@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewTransactionsVC">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionVC">
             <connections>
                 <outlet property="createTransactionButton" destination="0kg-m2-O5c" id="tdS-Vq-QMh"/>
                 <outlet property="transactionAmount" destination="Mvp-0k-gb5" id="mLf-ER-PGX"/>

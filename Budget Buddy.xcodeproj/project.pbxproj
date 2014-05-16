@@ -10,7 +10,7 @@
 		0C25EFA01914B3CF0012A80D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F3D190F42E500B1E243 /* Parse.framework */; };
 		0C25EFE719172AF50012A80D /* AccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFE619172AF50012A80D /* AccountVC.m */; };
 		0C25EFE919172B480012A80D /* AccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFE819172B480012A80D /* AccountVC.xib */; };
-		0C25EFEB19172B5A0012A80D /* NewTransactionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */; };
+		0C25EFEB19172B5A0012A80D /* TransactionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFEA19172B5A0012A80D /* TransactionVC.xib */; };
 		0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFF2191879BE0012A80D /* TransactionsVC.m */; };
 		0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFF9191FEAF20012A80D /* AccountTypesVC.m */; };
 		0C3C5EDA190E88BD00B1E243 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5ED9190E88BD00B1E243 /* Foundation.framework */; };
@@ -26,7 +26,7 @@
 		0C3C5EFF190E88BD00B1E243 /* Budget_BuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5EFE190E88BD00B1E243 /* Budget_BuddyTests.m */; };
 		0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F0A190F39B100B1E243 /* AppDelegate.m */; };
 		0C3C5F22190F3B3500B1E243 /* AccountsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F21190F3B3500B1E243 /* AccountsVC.m */; };
-		0C3C5F25190F3B5500B1E243 /* NewTransactionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F24190F3B5500B1E243 /* NewTransactionsVC.m */; };
+		0C3C5F25190F3B5500B1E243 /* TransactionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C3C5F24190F3B5500B1E243 /* TransactionVC.m */; };
 		0C3C5F27190F3B9A00B1E243 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F26190F3B9A00B1E243 /* StoreKit.framework */; };
 		0C3C5F29190F3BA100B1E243 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F28190F3BA100B1E243 /* QuartzCore.framework */; };
 		0C3C5F2B190F3BA600B1E243 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F2A190F3BA600B1E243 /* libz.dylib */; };
@@ -52,7 +52,7 @@
 		0C25EFE519172AF50012A80D /* AccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountVC.h; sourceTree = "<group>"; };
 		0C25EFE619172AF50012A80D /* AccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountVC.m; sourceTree = "<group>"; };
 		0C25EFE819172B480012A80D /* AccountVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountVC.xib; sourceTree = "<group>"; };
-		0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewTransactionsVC.xib; sourceTree = "<group>"; };
+		0C25EFEA19172B5A0012A80D /* TransactionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionVC.xib; sourceTree = "<group>"; };
 		0C25EFF1191879BE0012A80D /* TransactionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionsVC.h; sourceTree = "<group>"; };
 		0C25EFF2191879BE0012A80D /* TransactionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsVC.m; sourceTree = "<group>"; };
 		0C25EFF7191BCA0B0012A80D /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		0C3C5F19190F39F800B1E243 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		0C3C5F20190F3B3500B1E243 /* AccountsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountsVC.h; sourceTree = "<group>"; };
 		0C3C5F21190F3B3500B1E243 /* AccountsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountsVC.m; sourceTree = "<group>"; };
-		0C3C5F23190F3B5500B1E243 /* NewTransactionsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTransactionsVC.h; sourceTree = "<group>"; };
-		0C3C5F24190F3B5500B1E243 /* NewTransactionsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTransactionsVC.m; sourceTree = "<group>"; };
+		0C3C5F23190F3B5500B1E243 /* TransactionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionVC.h; sourceTree = "<group>"; };
+		0C3C5F24190F3B5500B1E243 /* TransactionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionVC.m; sourceTree = "<group>"; };
 		0C3C5F26190F3B9A00B1E243 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0C3C5F28190F3BA100B1E243 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0C3C5F2A190F3BA600B1E243 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -228,8 +228,8 @@
 				0C25EFF9191FEAF20012A80D /* AccountTypesVC.m */,
 				0C25EFF1191879BE0012A80D /* TransactionsVC.h */,
 				0C25EFF2191879BE0012A80D /* TransactionsVC.m */,
-				0C3C5F23190F3B5500B1E243 /* NewTransactionsVC.h */,
-				0C3C5F24190F3B5500B1E243 /* NewTransactionsVC.m */,
+				0C3C5F23190F3B5500B1E243 /* TransactionVC.h */,
+				0C3C5F24190F3B5500B1E243 /* TransactionVC.m */,
 				0C25EFF7191BCA0B0012A80D /* Config.h */,
 				0C3C5F0B190F39B100B1E243 /* README.md */,
 			);
@@ -281,7 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				0C25EFE819172B480012A80D /* AccountVC.xib */,
-				0C25EFEA19172B5A0012A80D /* NewTransactionsVC.xib */,
+				0C25EFEA19172B5A0012A80D /* TransactionVC.xib */,
 				0C3C5F19190F39F800B1E243 /* README.md */,
 			);
 			path = Views;
@@ -364,7 +364,7 @@
 			files = (
 				0C3C5EE4190E88BD00B1E243 /* InfoPlist.strings in Resources */,
 				0C25EFE919172B480012A80D /* AccountVC.xib in Resources */,
-				0C25EFEB19172B5A0012A80D /* NewTransactionsVC.xib in Resources */,
+				0C25EFEB19172B5A0012A80D /* TransactionVC.xib in Resources */,
 				0C3C5EEC190E88BD00B1E243 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,7 +388,7 @@
 				0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */,
 				0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */,
 				0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */,
-				0C3C5F25190F3B5500B1E243 /* NewTransactionsVC.m in Sources */,
+				0C3C5F25190F3B5500B1E243 /* TransactionVC.m in Sources */,
 				0C25EFE719172AF50012A80D /* AccountVC.m in Sources */,
 				0C3C5EE6190E88BD00B1E243 /* main.m in Sources */,
 			);
