@@ -115,46 +115,6 @@
     [self.navigationController pushViewController:accountVC animated:YES];
 }
 
-- (void)signup {
-
-    PFUser *user = [PFUser user];
-    user.username = @"marku";
-    user.password = @"h3ll0";
-    user.email = @"marco.cabazal@gmail.com";
-
-
-    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-
-        if (!error) {
-
-        } else {
-
-            NSString *errorString = [error userInfo][@"error"];
-
-            NSLog (@"Singup Error: %@", errorString);
-
-        }
-    }];
-}
-
-- (void)login {
-
-    [PFUser logInWithUsernameInBackground:@"marku" password:@"h3ll0"
-                                    block:^(PFUser *user, NSError *error) {
-
-                                        if (user) {
-
-                                            NSLog (@"login success.");
-
-                                        } else {
-
-                                            NSString *errorString = [error userInfo][@"error"];
-
-                                            NSLog (@"Login Error: %@", errorString);
-                                        }
-                                    }];
-}
-
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -214,11 +174,25 @@
 
     if (editingStyle == UITableViewCellEditingStyleDelete) {
 
+        PFUser *currentUser = [PFUser currentUser];
         PFObject *accountObject = _objects[indexPath.row];
+
+        PFQuery *query = [PFQuery queryWithClassName:@"Transaction"];
+        [query whereKey:@"owner" equalTo:currentUser];
+        [query whereKey:@"account" equalTo:accountObject];
+
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+
+            for (PFObject *object in objects) {
+
+                [object deleteEventually];
+            }
+        }];
+
+        
         [accountObject deleteEventually];
         
         [_objects removeObjectAtIndex:indexPath.row];
-
 
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 
