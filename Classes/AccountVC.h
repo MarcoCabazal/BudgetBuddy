@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AccountTypesVC.h"
 
-@protocol AccountsDelegate <NSObject>
+@protocol AccountDelegate <NSObject>
 
 @required
 - (void) saveNewAccount:(NSString*)accountDescription accountType:(NSString*)accountType;
@@ -18,10 +18,11 @@
 
 @interface AccountVC : UIViewController <UITextFieldDelegate, AccountTypesDelegate>
 
+@property (strong, nonatomic) PFObject *accountObject;
 @property (strong, nonatomic) IBOutlet UITextField *accountDescription;
 @property (strong, nonatomic) IBOutlet UITextField *accountType;
 @property (strong, nonatomic) IBOutlet UIButton *accountTypeButton;
 @property (strong, nonatomic) IBOutlet UIButton *createAccountButton;
-@property (nonatomic, assign) id <AccountsDelegate> delegate;
+@property (nonatomic, assign) id <AccountDelegate> delegate;
 @end
 
