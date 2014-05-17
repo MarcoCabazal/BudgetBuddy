@@ -12,6 +12,7 @@
 
 @interface AccountsVC () {
     NSMutableArray *_objects;
+    NSMutableDictionary *_transactions;
 }
 @end
 
@@ -36,6 +37,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(displayNewAccountsVC)];
     self.navigationItem.rightBarButtonItem = addButton;
 
+	_transactions = [NSMutableDictionary dictionary];
 
     PFUser *currentUser = [PFUser currentUser];
 
@@ -53,6 +55,34 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 
             _objects = [objects mutableCopy];
+
+            for (PFObject *accountObject in _objects) {
+
+				PFQuery *transactionQuery = [PFQuery queryWithClassName:@"Transaction"];
+                transactionQuery.cachePolicy = kPFCachePolicyCacheThenNetwork;
+                [transactionQuery whereKey:@"owner" equalTo:currentUser];
+                [transactionQuery whereKey:@"account" equalTo:accountObject];
+
+                [transactionQuery findObjectsInBackgroundWithBlock:^(NSArray *transactionObjects, NSError *error) {
+
+                    NSArray *transactions = [transactionObjects copy];
+
+                    double total;
+
+                    total = 0;
+
+                    for (PFObject *transaction in transactions) {
+
+						total = total + [transaction[@"transactionAmount"] doubleValue];
+                    }
+
+					[_transactions setObject:[NSNumber numberWithDouble:total] forKey:accountObject[@"accountDescription"]];
+
+                    [self.tableView reloadData];
+                }];
+
+            }
+
             [self.tableView reloadData];
         }];
     }
@@ -63,7 +93,7 @@
     [self.tableView reloadData];
 }
 
-- (void) saveNewAccount:(NSString *)accountDescription accountType:(NSString *)accountType {
+- (void)saveNewAccount:(NSString *)accountDescription accountType:(NSString *)accountType {
 
     PFUser *currentUser = [PFUser currentUser];
 
@@ -79,7 +109,7 @@
     }
 }
 
-- (void) updateAccount:(PFObject *)accountObject withDescription:(NSString *)accountDescription andAccountType:(NSString *)accountType {
+- (void)updateAccount:(PFObject *)accountObject withDescription:(NSString *)accountDescription andAccountType:(NSString *)accountType {
 
     PFUser *currentUser = [PFUser currentUser];
 
@@ -134,12 +164,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     }
 
     PFObject *object = _objects[indexPath.row];
 
     cell.textLabel.text = object[@"accountDescription"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [_transactions valueForKey:object[@"accountDescription"]]];
+
     cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     return cell;
 }
