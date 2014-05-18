@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AccountVC.h"
 
-@interface AccountsVC : UITableViewController <AccountDelegate>
+@interface AccountsVC : UITableViewController <AccountDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @end
 

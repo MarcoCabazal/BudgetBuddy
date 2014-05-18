@@ -9,6 +9,8 @@
 #import "AccountsVC.h"
 #import "AccountVC.h"
 #import "TransactionsVC.h"
+#import "LoginVC.h"
+#import "SignUpVC.h"
 
 @interface AccountsVC () {
     NSMutableArray *_objects;
@@ -32,21 +34,34 @@
 	UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
     [self setTabBarItem:item];
 
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(logoutUser)];
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(displayNewAccountsVC)];
     self.navigationItem.rightBarButtonItem = addButton;
 
 	_transactions = [NSMutableDictionary dictionary];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
 
     PFUser *currentUser = [PFUser currentUser];
 
 	if (! currentUser) {
 
-        NSLog (@"currentUser not found.");
-        // TODO: present login form
+        LoginVC *logInViewController = [[LoginVC alloc] init];
+        [logInViewController setDelegate:self];
+        [logInViewController setFields: PFLogInFieldsUsernameAndPassword | PFLogInFieldsLogInButton | PFLogInFieldsSignUpButton];
+        [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", nil]];
 
-    } else {
+        SignUpVC *signUpViewController = [[SignUpVC alloc] init];
+        [signUpViewController setDelegate:self];
+
+        [logInViewController setSignUpController:signUpViewController];
+
+        [self presentViewController:logInViewController animated:YES completion:NULL];
+    }
+
+    if (currentUser) {
 
         PFQuery *query = [PFQuery queryWithClassName:@"Account"];
         query.cachePolicy = kPFCachePolicyCacheThenNetwork;
@@ -86,11 +101,84 @@
             [self.tableView reloadData];
         }];
     }
-}
-
-- (void)viewDidAppear:(BOOL)animated {
 
     [self.tableView reloadData];
+}
+
+#pragma mark - Login Delegate
+
+- (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password {
+
+    if (username && password && username.length != 0 && password.length != 0) {
+        return YES;
+    }
+
+    [[[UIAlertView alloc] initWithTitle:@"Missing Information"
+                                message:@"Make sure you fill out all of the information!"
+                               delegate:nil
+                      cancelButtonTitle:@"ok"
+                      otherButtonTitles:nil] show];
+    return NO; // Interrupt login process
+}
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+    NSLog(@"Failed to log in...");
+}
+
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - SignUp Delegate
+
+- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController shouldBeginSignUp:(NSDictionary *)info {
+
+    BOOL informationComplete = YES;
+
+    for (id key in info) {
+        NSString *field = [info objectForKey:key];
+        if (!field || field.length == 0) { // check completion
+            informationComplete = NO;
+            break;
+        }
+    }
+
+    if (!informationComplete) {
+        [[[UIAlertView alloc] initWithTitle:@"Missing Information"
+                                    message:@"Make sure you fill out all of the information!"
+                                   delegate:nil
+                          cancelButtonTitle:@"ok"
+                          otherButtonTitles:nil] show];
+    }
+
+    return informationComplete;
+}
+
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+- (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error {
+
+    NSLog(@"Failed to sign up...");
+}
+
+- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController {
+
+    NSLog(@"User dismissed the signUpViewController");
+}
+
+- (void)logoutUser {
+
+    [PFUser logOut];
+
+    [self viewDidAppear:YES];
 }
 
 - (void)saveNewAccount:(NSString *)accountDescription accountType:(NSString *)accountType {

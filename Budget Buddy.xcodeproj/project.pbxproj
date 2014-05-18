@@ -36,6 +36,11 @@
 		0C3C5F33190F3BBE00B1E243 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F32190F3BBE00B1E243 /* Security.framework */; };
 		0C3C5F35190F3BC500B1E243 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */; };
 		0C3C5F37190F3BCA00B1E243 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */; };
+		0C471BBE192759E9000AE33F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C471BBD192759E9000AE33F /* Social.framework */; };
+		0C471BC019275A07000AE33F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C471BBF19275A07000AE33F /* Twitter.framework */; };
+		0C471BC219275B1E000AE33F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C471BC119275B1E000AE33F /* Accounts.framework */; };
+		0C471BC71928688A000AE33F /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C471BC41928688A000AE33F /* LoginVC.m */; };
+		0C471BC81928688A000AE33F /* SignUpVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C471BC61928688A000AE33F /* SignUpVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +100,13 @@
 		0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0C3C5F3D190F42E500B1E243 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0C471BBD192759E9000AE33F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0C471BBF19275A07000AE33F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		0C471BC119275B1E000AE33F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		0C471BC31928688A000AE33F /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		0C471BC41928688A000AE33F /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		0C471BC51928688A000AE33F /* SignUpVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpVC.h; sourceTree = "<group>"; };
+		0C471BC61928688A000AE33F /* SignUpVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C471BC219275B1E000AE33F /* Accounts.framework in Frameworks */,
+				0C471BC019275A07000AE33F /* Twitter.framework in Frameworks */,
+				0C471BBE192759E9000AE33F /* Social.framework in Frameworks */,
 				0C3C5F37190F3BCA00B1E243 /* CFNetwork.framework in Frameworks */,
 				0C3C5F35190F3BC500B1E243 /* SystemConfiguration.framework in Frameworks */,
 				0C3C5F33190F3BBE00B1E243 /* Security.framework in Frameworks */,
@@ -160,6 +175,9 @@
 		0C3C5ED8190E88BD00B1E243 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C471BC119275B1E000AE33F /* Accounts.framework */,
+				0C471BBF19275A07000AE33F /* Twitter.framework */,
+				0C471BBD192759E9000AE33F /* Social.framework */,
 				0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */,
 				0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */,
 				0C3C5F32190F3BBE00B1E243 /* Security.framework */,
@@ -232,6 +250,10 @@
 				0C3C5F24190F3B5500B1E243 /* TransactionVC.m */,
 				0C25EFF7191BCA0B0012A80D /* Config.h */,
 				0C3C5F0B190F39B100B1E243 /* README.md */,
+				0C471BC31928688A000AE33F /* LoginVC.h */,
+				0C471BC41928688A000AE33F /* LoginVC.m */,
+				0C471BC51928688A000AE33F /* SignUpVC.h */,
+				0C471BC61928688A000AE33F /* SignUpVC.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -384,8 +406,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C471BC71928688A000AE33F /* LoginVC.m in Sources */,
 				0C3C5F22190F3B3500B1E243 /* AccountsVC.m in Sources */,
 				0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */,
+				0C471BC81928688A000AE33F /* SignUpVC.m in Sources */,
 				0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */,
 				0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */,
 				0C3C5F25190F3B5500B1E243 /* TransactionVC.m in Sources */,
