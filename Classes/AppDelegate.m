@@ -17,19 +17,15 @@
                   clientKey:@"TGvD04hODwV3QXNJPWO1ngRwRq4N4s7nB71rSNV6"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
-
-//    NewTransactionsVC *transactionsVC = [[NewTransactionsVC alloc] init];
-//    UINavigationController *transactionsNav = [[UINavigationController alloc] initWithRootViewController:transactionsVC];
-
     AccountsVC *mainVC = [[AccountsVC alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 
 
     self.tabController = [[UITabBarController alloc] init];
-
     [self.tabController setViewControllers:@[mainNav]];
-
-//	[[UIView appearance] setBackgroundColor:OPAQUE_HEXCOLOR(0xdddddd)];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.tabController;
