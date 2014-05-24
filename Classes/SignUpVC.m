@@ -27,15 +27,17 @@
     [self.signUpView.signUpButton setTitle:@"Create Account" forState:UIControlStateNormal];
 
     [self.fieldsBackground setFrame:CGRectMake(35.0f, 145.0f, 250.0f, 100.0f)];
+
+    [self.signUpView.usernameField becomeFirstResponder];
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
 
-    [self.signUpView.usernameField setFrame:CGRectMake(35.0f, 145.0f, 250.0f, 50.0f)];
-    [self.signUpView.emailField setFrame:CGRectMake(35.0f, 195, 250.0f, 50.0f)];
-    [self.signUpView.passwordField setFrame:CGRectMake(35.0f, 245.0f, 250.0f, 50.0f)];
-    [self.signUpView.signUpButton setFrame:CGRectMake(35.0f, 325, 250.0f, 40.0f)];
+    [self.signUpView.usernameField setFrame:CGRectMake(35.0f, 115.0f, 250.0f, 50.0f)];
+    [self.signUpView.emailField setFrame:CGRectMake(35.0f, 165, 250.0f, 50.0f)];
+    [self.signUpView.passwordField setFrame:CGRectMake(35.0f, 215.0f, 250.0f, 50.0f)];
+    [self.signUpView.signUpButton setFrame:CGRectMake(35.0f, 295, 250.0f, 40.0f)];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
