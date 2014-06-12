@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C25C4EF1948145A0028E113 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C25C4E91948145A0028E113 /* libTestFlight.a */; };
+		0C25C4F01948145A0028E113 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C25C4EA1948145A0028E113 /* README.md */; };
+		0C25C4F11948145A0028E113 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C25C4EB1948145A0028E113 /* release_notes.md */; };
+		0C25C4FF19483B900028E113 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25C4F419483B900028E113 /* NSMutableArray+SWUtilityButtons.m */; };
+		0C25C50019483B900028E113 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25C4F619483B900028E113 /* SWCellScrollView.m */; };
+		0C25C50119483B900028E113 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25C4F819483B900028E113 /* SWLongPressGestureRecognizer.m */; };
+		0C25C50219483B900028E113 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25C4FA19483B900028E113 /* SWTableViewCell.m */; };
+		0C25C50319483B900028E113 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25C4FC19483B900028E113 /* SWUtilityButtonTapGestureRecognizer.m */; };
+		0C25C50419483B900028E113 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25C4FE19483B900028E113 /* SWUtilityButtonView.m */; };
+		0C25C50919483D6E0028E113 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C25C50519483D6E0028E113 /* check@2x.png */; };
+		0C25C50A19483D6E0028E113 /* clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C25C50619483D6E0028E113 /* clock@2x.png */; };
+		0C25C50B19483D6E0028E113 /* cross@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C25C50719483D6E0028E113 /* cross@2x.png */; };
+		0C25C50C19483D6E0028E113 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C25C50819483D6E0028E113 /* list@2x.png */; };
 		0C25EFA01914B3CF0012A80D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F3D190F42E500B1E243 /* Parse.framework */; };
 		0C25EFE719172AF50012A80D /* AccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25EFE619172AF50012A80D /* AccountVC.m */; };
 		0C25EFE919172B480012A80D /* AccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C25EFE819172B480012A80D /* AccountVC.xib */; };
@@ -36,6 +49,8 @@
 		0C3C5F33190F3BBE00B1E243 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F32190F3BBE00B1E243 /* Security.framework */; };
 		0C3C5F35190F3BC500B1E243 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */; };
 		0C3C5F37190F3BCA00B1E243 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */; };
+		0C4571591930F716005EC1C1 /* AccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4571581930F716005EC1C1 /* AccountCell.m */; };
+		0C4571601930F796005EC1C1 /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C45715F1930F796005EC1C1 /* AccountCell.xib */; };
 		0C471BBE192759E9000AE33F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C471BBD192759E9000AE33F /* Social.framework */; };
 		0C471BC019275A07000AE33F /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C471BBF19275A07000AE33F /* Twitter.framework */; };
 		0C471BC219275B1E000AE33F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C471BC119275B1E000AE33F /* Accounts.framework */; };
@@ -54,6 +69,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C25C4E91948145A0028E113 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		0C25C4EA1948145A0028E113 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		0C25C4EB1948145A0028E113 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		0C25C4EC1948145A0028E113 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		0C25C4ED1948145A0028E113 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		0C25C4EE1948145A0028E113 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		0C25C4F319483B900028E113 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		0C25C4F419483B900028E113 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		0C25C4F519483B900028E113 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		0C25C4F619483B900028E113 /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		0C25C4F719483B900028E113 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		0C25C4F819483B900028E113 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		0C25C4F919483B900028E113 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		0C25C4FA19483B900028E113 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		0C25C4FB19483B900028E113 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		0C25C4FC19483B900028E113 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		0C25C4FD19483B900028E113 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		0C25C4FE19483B900028E113 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		0C25C50519483D6E0028E113 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		0C25C50619483D6E0028E113 /* clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clock@2x.png"; sourceTree = "<group>"; };
+		0C25C50719483D6E0028E113 /* cross@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cross@2x.png"; sourceTree = "<group>"; };
+		0C25C50819483D6E0028E113 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		0C25EFE519172AF50012A80D /* AccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountVC.h; sourceTree = "<group>"; };
 		0C25EFE619172AF50012A80D /* AccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountVC.m; sourceTree = "<group>"; };
 		0C25EFE819172B480012A80D /* AccountVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountVC.xib; sourceTree = "<group>"; };
@@ -100,6 +137,9 @@
 		0C3C5F34190F3BC500B1E243 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0C3C5F36190F3BCA00B1E243 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		0C3C5F3D190F42E500B1E243 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0C4571571930F716005EC1C1 /* AccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountCell.h; sourceTree = "<group>"; };
+		0C4571581930F716005EC1C1 /* AccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountCell.m; sourceTree = "<group>"; };
+		0C45715F1930F796005EC1C1 /* AccountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		0C471BBD192759E9000AE33F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0C471BBF19275A07000AE33F /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		0C471BC119275B1E000AE33F /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -125,6 +165,7 @@
 				0C3C5F2D190F3BAC00B1E243 /* CoreLocation.framework in Frameworks */,
 				0C3C5F2B190F3BA600B1E243 /* libz.dylib in Frameworks */,
 				0C25EFA01914B3CF0012A80D /* Parse.framework in Frameworks */,
+				0C25C4EF1948145A0028E113 /* libTestFlight.a in Frameworks */,
 				0C3C5F29190F3BA100B1E243 /* QuartzCore.framework in Frameworks */,
 				0C3C5F27190F3B9A00B1E243 /* StoreKit.framework in Frameworks */,
 				0C3C5EDC190E88BD00B1E243 /* CoreGraphics.framework in Frameworks */,
@@ -146,6 +187,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C25C4E81948145A0028E113 /* TestFlightSDK3.0.2 */ = {
+			isa = PBXGroup;
+			children = (
+				0C25C4E91948145A0028E113 /* libTestFlight.a */,
+				0C25C4EA1948145A0028E113 /* README.md */,
+				0C25C4EB1948145A0028E113 /* release_notes.md */,
+				0C25C4EC1948145A0028E113 /* TestFlight+AsyncLogging.h */,
+				0C25C4ED1948145A0028E113 /* TestFlight+ManualSessions.h */,
+				0C25C4EE1948145A0028E113 /* TestFlight.h */,
+			);
+			path = TestFlightSDK3.0.2;
+			sourceTree = "<group>";
+		};
+		0C25C4F219483B900028E113 /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0C25C4F319483B900028E113 /* NSMutableArray+SWUtilityButtons.h */,
+				0C25C4F419483B900028E113 /* NSMutableArray+SWUtilityButtons.m */,
+				0C25C4F519483B900028E113 /* SWCellScrollView.h */,
+				0C25C4F619483B900028E113 /* SWCellScrollView.m */,
+				0C25C4F719483B900028E113 /* SWLongPressGestureRecognizer.h */,
+				0C25C4F819483B900028E113 /* SWLongPressGestureRecognizer.m */,
+				0C25C4F919483B900028E113 /* SWTableViewCell.h */,
+				0C25C4FA19483B900028E113 /* SWTableViewCell.m */,
+				0C25C4FB19483B900028E113 /* SWUtilityButtonTapGestureRecognizer.h */,
+				0C25C4FC19483B900028E113 /* SWUtilityButtonTapGestureRecognizer.m */,
+				0C25C4FD19483B900028E113 /* SWUtilityButtonView.h */,
+				0C25C4FE19483B900028E113 /* SWUtilityButtonView.m */,
+			);
+			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
 		0C3C5ECD190E88BD00B1E243 = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +313,8 @@
 				0C3C5F0A190F39B100B1E243 /* AppDelegate.m */,
 				0C3C5F20190F3B3500B1E243 /* AccountsVC.h */,
 				0C3C5F21190F3B3500B1E243 /* AccountsVC.m */,
+				0C4571571930F716005EC1C1 /* AccountCell.h */,
+				0C4571581930F716005EC1C1 /* AccountCell.m */,
 				0C25EFE519172AF50012A80D /* AccountVC.h */,
 				0C25EFE619172AF50012A80D /* AccountVC.m */,
 				0C25EFF8191FEAF20012A80D /* AccountTypesVC.h */,
@@ -261,6 +336,10 @@
 		0C3C5F0E190F39F800B1E243 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0C25C50519483D6E0028E113 /* check@2x.png */,
+				0C25C50619483D6E0028E113 /* clock@2x.png */,
+				0C25C50719483D6E0028E113 /* cross@2x.png */,
+				0C25C50819483D6E0028E113 /* list@2x.png */,
 				0C3C5F0F190F39F800B1E243 /* README.md */,
 			);
 			path = Images;
@@ -293,6 +372,8 @@
 		0C3C5F16190F39F800B1E243 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				0C25C4F219483B900028E113 /* SWTableViewCell */,
+				0C25C4E81948145A0028E113 /* TestFlightSDK3.0.2 */,
 				0C3C5F3D190F42E500B1E243 /* Parse.framework */,
 				0C3C5F17190F39F800B1E243 /* README.md */,
 			);
@@ -302,6 +383,7 @@
 		0C3C5F18190F39F800B1E243 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C45715F1930F796005EC1C1 /* AccountCell.xib */,
 				0C25EFE819172B480012A80D /* AccountVC.xib */,
 				0C25EFEA19172B5A0012A80D /* TransactionVC.xib */,
 				0C3C5F19190F39F800B1E243 /* README.md */,
@@ -384,10 +466,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C25C4F01948145A0028E113 /* README.md in Resources */,
 				0C3C5EE4190E88BD00B1E243 /* InfoPlist.strings in Resources */,
 				0C25EFE919172B480012A80D /* AccountVC.xib in Resources */,
 				0C25EFEB19172B5A0012A80D /* TransactionVC.xib in Resources */,
+				0C25C4F11948145A0028E113 /* release_notes.md in Resources */,
+				0C25C50B19483D6E0028E113 /* cross@2x.png in Resources */,
 				0C3C5EEC190E88BD00B1E243 /* Images.xcassets in Resources */,
+				0C25C50A19483D6E0028E113 /* clock@2x.png in Resources */,
+				0C4571601930F796005EC1C1 /* AccountCell.xib in Resources */,
+				0C25C50C19483D6E0028E113 /* list@2x.png in Resources */,
+				0C25C50919483D6E0028E113 /* check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,10 +498,17 @@
 				0C471BC71928688A000AE33F /* LoginVC.m in Sources */,
 				0C3C5F22190F3B3500B1E243 /* AccountsVC.m in Sources */,
 				0C25EFF3191879BE0012A80D /* TransactionsVC.m in Sources */,
+				0C25C50119483B900028E113 /* SWLongPressGestureRecognizer.m in Sources */,
+				0C25C4FF19483B900028E113 /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				0C25C50419483B900028E113 /* SWUtilityButtonView.m in Sources */,
+				0C4571591930F716005EC1C1 /* AccountCell.m in Sources */,
 				0C471BC81928688A000AE33F /* SignUpVC.m in Sources */,
+				0C25C50319483B900028E113 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				0C25EFFA191FEAF20012A80D /* AccountTypesVC.m in Sources */,
 				0C3C5F0C190F39B100B1E243 /* AppDelegate.m in Sources */,
 				0C3C5F25190F3B5500B1E243 /* TransactionVC.m in Sources */,
+				0C25C50019483B900028E113 /* SWCellScrollView.m in Sources */,
+				0C25C50219483B900028E113 /* SWTableViewCell.m in Sources */,
 				0C25EFE719172AF50012A80D /* AccountVC.m in Sources */,
 				0C3C5EE6190E88BD00B1E243 /* main.m in Sources */,
 			);
@@ -539,6 +635,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Budget Buddy/Budget Buddy-Prefix.pch";
 				INFOPLIST_FILE = "Budget Buddy/Budget Buddy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Third",
+					Party/TestFlightSDK3.0.2,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -557,6 +658,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Budget Buddy/Budget Buddy-Prefix.pch";
 				INFOPLIST_FILE = "Budget Buddy/Budget Buddy-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Third",
+					Party/TestFlightSDK3.0.2,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
