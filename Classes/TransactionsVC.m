@@ -8,10 +8,13 @@
 
 #import "TransactionsVC.h"
 #import "TransactionVC.h"
+#import "AccountCell.h"
 
 @interface TransactionsVC () {
     NSMutableArray *_objects;
 }
+
+@property (strong, nonatomic) UITableView *tableView;
 @end
 
 @implementation TransactionsVC
@@ -27,10 +30,22 @@
 
     [self setTitle:self.accountObject[@"accountDescription"]];
 
-    [self.navigationItem.backBarButtonItem setTitle:@"Accounts"];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
+    [self.tableView setAutoresizesSubviews:YES];
+    [self.tableView setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin];
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+    [self.tableView registerNib:[UINib nibWithNibName:@"AccountCell" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.tableView setBackgroundColor:[UIColor darkGrayColor]];
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
 
+    [self.view addSubview:self.tableView];
+
+    [self.navigationItem.backBarButtonItem setTitle:@"Accounts"];
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(displayNewVC)];
     self.navigationItem.rightBarButtonItem = addButton;
+
 
     PFUser *currentUser = [PFUser currentUser];
 
@@ -98,19 +113,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"TransactionCell";
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-    }
+    AccountCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     PFObject *object = _objects[indexPath.row];
 
-    cell.textLabel.text = object[@"transactionDescription"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", object[@"transactionAmount"]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    [cell configureCellWithDescription:object[@"transactionDescription"] andAmount:object[@"transactionAmount"]];
+
+
     return cell;
 }
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TransactionVC.h"
 
-@interface TransactionsVC : UITableViewController <TransactionsDelegate>
+@interface TransactionsVC : UIViewController <TransactionsDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) PFObject *accountObject;
 
 @end
