@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "AccountVC.h"
+#import "SWTableViewCell.h"
 
-@interface AccountsVC : UITableViewController <AccountDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface AccountsVC : UIViewController <UITableViewDataSource, UITableViewDelegate, AccountDelegate, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, SWTableViewCellDelegate>
 
 @end
 

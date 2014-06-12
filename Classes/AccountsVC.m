@@ -9,13 +9,17 @@
 #import "AccountsVC.h"
 #import "AccountVC.h"
 #import "TransactionsVC.h"
+#import "AccountCell.h"
 #import "LoginVC.h"
 #import "SignUpVC.h"
+#import "SWTableViewCell.h"
 
 @interface AccountsVC () {
     NSMutableArray *_objects;
     NSMutableDictionary *_transactions;
 }
+
+@property (strong, nonatomic) UITableView *tableView;
 @end
 
 @implementation AccountsVC
@@ -30,6 +34,18 @@
     [super viewDidLoad];
 
     [self setTitle:@"Accounts Overview"];
+
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 600)];
+    [self.tableView setAutoresizesSubviews:YES];
+    [self.tableView setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin];
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+    [self.tableView registerNib:[UINib nibWithNibName:@"AccountCell" bundle:nil] forCellReuseIdentifier:@"AccountCell"];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.tableView setBackgroundColor:[UIColor darkGrayColor]];
+    [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+
+    [self.view addSubview:self.tableView];
 
 	UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
     [self setTabBarItem:item];
@@ -118,7 +134,7 @@
                                delegate:nil
                       cancelButtonTitle:@"ok"
                       otherButtonTitles:nil] show];
-    return NO; // Interrupt login process
+    return NO;
 }
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
@@ -127,10 +143,12 @@
 }
 
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+
     NSLog(@"Failed to log in...");
 }
 
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController {
+
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -141,8 +159,11 @@
     BOOL informationComplete = YES;
 
     for (id key in info) {
+
         NSString *field = [info objectForKey:key];
-        if (!field || field.length == 0) { // check completion
+
+        if (!field || field.length == 0) {
+
             informationComplete = NO;
             break;
         }
@@ -247,20 +268,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"AccountCell";
 
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-    }
+    AccountCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 
     PFObject *object = _objects[indexPath.row];
 
-    cell.textLabel.text = object[@"accountDescription"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [_transactions valueForKey:object[@"accountDescription"]]];
+    cell.rightUtilityButtons = [self leftButtons];
+    cell.delegate = self;
 
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    [cell configureCellWithDescription:object[@"accountDescription"] andAmount:[_transactions valueForKey:object[@"accountDescription"]]];
+
     return cell;
 }
 
@@ -308,7 +326,6 @@
                 [object deleteEventually];
             }
         }];
-
         
         [accountObject deleteEventually];
         
@@ -319,6 +336,119 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
 
     }
+}
+
+#pragma mark - SWTableViewDelegate
+
+- (NSArray *)rightButtons {
+
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
+                                                title:@"More"];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                title:@"Delete"];
+
+    return rightUtilityButtons;
+}
+
+- (NSArray *)leftButtons {
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.07 green:0.75f blue:0.16f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"check.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0]
+                                               title:@"Delete"] ;
+
+    return leftUtilityButtons;
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell scrollingToState:(SWCellState)state {
+
+    switch (state) {
+        case 0:
+            NSLog(@"utility buttons closed");
+            break;
+        case 1:
+            NSLog(@"left utility buttons open");
+            break;
+        case 2:
+            NSLog(@"right utility buttons open");
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index {
+    switch (index) {
+        case 0:
+            NSLog(@"left button 0 was pressed");
+            break;
+        case 1:
+            NSLog(@"left button 1 was pressed");
+            break;
+        case 2:
+            NSLog(@"left button 2 was pressed");
+            break;
+        case 3:
+            NSLog(@"left btton 3 was pressed");
+        default:
+            break;
+    }
+}
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index {
+
+    switch (index) {
+        case 0:
+        {
+            NSLog(@"More button was pressed");
+            UIAlertView *alertTest = [[UIAlertView alloc] initWithTitle:@"Hello" message:@"More more more" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles: nil];
+            [alertTest show];
+
+            [cell hideUtilityButtonsAnimated:YES];
+            break;
+        }
+        case 1:
+        {
+                // Delete button was pressed
+            NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
+
+//            [_testArray[cellIndexPath.section] removeObjectAtIndex:cellIndexPath.row];
+//            [self.tableView deleteRowsAtIndexPaths:@[cellIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
+
+            NSLog (@"boo");
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (BOOL)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell {
+        // allow just one cell's utility button to be open at once
+    return YES;
+}
+
+- (BOOL)swipeableTableViewCell:(SWTableViewCell *)cell canSwipeToState:(SWCellState)state {
+    switch (state) {
+        case 1:
+                // set to NO to disable all left utility buttons appearing
+            return YES;
+            break;
+        case 2:
+                // set to NO to disable all right utility buttons appearing
+            return YES;
+            break;
+        default:
+            break;
+    }
+    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
