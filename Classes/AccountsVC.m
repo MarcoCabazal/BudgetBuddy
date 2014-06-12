@@ -50,10 +50,16 @@
 	UITabBarItem *item = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:0];
     [self setTabBarItem:item];
 
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(logoutUser)];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(displayNewAccountsVC)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] init];
+    [logoutButton setTitle:@"Logout"];
+    [logoutButton setAction:@selector(logoutUser)];
+    [self.navigationItem setLeftBarButtonItem:logoutButton];
+
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] init];
+    [addButton setTitle:@"Add"];
+    [addButton setAction:@selector(displayNewAccountsVC)];
+    [self.navigationItem setRightBarButtonItem:addButton];
 
 	_transactions = [NSMutableDictionary dictionary];
 }
