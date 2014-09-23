@@ -32,7 +32,22 @@
 
 - (void)configureCellWithDescription:(NSString*)accountDescription andAmount:(NSNumber*)transactionsAmount {
 
+    [self.accountDescriptionLabel setTextColor:OPAQUE_HEXCOLOR(0xcccccc)];
+    [self.accountDescriptionLabel setFont:[UIFont boldSystemFontOfSize:20]];
     [self.accountDescriptionLabel setText:accountDescription];
+
+
+    [self.transactionsAmountLabel setFont:[UIFont boldSystemFontOfSize:15]];
+
+    if ([transactionsAmount floatValue] < 0) {
+
+        [self.transactionsAmountLabel setTextColor:OPAQUE_HEXCOLOR(0xF24E62)];
+
+    } else {
+
+        [self.transactionsAmountLabel setTextColor:OPAQUE_HEXCOLOR(0x7ED321)];
+    }
+
     [self.transactionsAmountLabel setText:[NSString stringWithFormat:@"%@", transactionsAmount]];
 
 }
