@@ -111,7 +111,7 @@
 
 - (void)dismissThisVC {
 
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
