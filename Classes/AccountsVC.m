@@ -59,12 +59,17 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] init];
     [addButton setTitle:@"Add"];
     [addButton setAction:@selector(displayNewAccountsVC)];
+    [addButton setTarget:self];
     [self.navigationItem setRightBarButtonItem:addButton];
 
 	_transactions = [NSMutableDictionary dictionary];
+
+    [self setNeedsStatusBarAppearanceUpdate];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
 
     PFUser *currentUser = [PFUser currentUser];
 
@@ -257,7 +262,8 @@
     AccountVC *accountVC = [[AccountVC alloc] init];
     [accountVC setDelegate:self];
 
-    [self.navigationController pushViewController:accountVC animated:YES];
+     UINavigationController *tempNav = [[UINavigationController alloc] initWithRootViewController:accountVC];
+    [self presentViewController:tempNav animated:YES completion:nil];
 }
 
 #pragma mark - Table View
@@ -422,7 +428,7 @@
         case 1:
         {
                 // Delete button was pressed
-            NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
+//            NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
 
 //            [_testArray[cellIndexPath.section] removeObjectAtIndex:cellIndexPath.row];
 //            [self.tableView deleteRowsAtIndexPaths:@[cellIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
