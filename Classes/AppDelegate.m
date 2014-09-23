@@ -21,18 +21,13 @@
     AccountsVC *mainVC = [[AccountsVC alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     
-    [[UINavigationBar appearance] setBarTintColor:[UIColor orangeColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-//    [[UITabBar appearance] setBackgroundColor:[UIColor darkGrayColor]];
-    [[UITabBar appearance] setBarTintColor:[UIColor darkGrayColor]];
-    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
-
-
-    self.tabController = [[UITabBarController alloc] init];
-    [self.tabController setViewControllers:@[mainNav]];
+    [[UINavigationBar appearance] setBarTintColor:OPAQUE_HEXCOLOR(0x444444)];
+    [[UINavigationBar appearance] setTintColor:[UIColor orangeColor]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor orangeColor]}];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.tabController;
+    self.window.rootViewController = mainNav;
     [self.window makeKeyAndVisible];
 
     return YES;
